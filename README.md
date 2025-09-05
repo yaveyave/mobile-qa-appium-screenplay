@@ -71,7 +71,7 @@ Ejemplo para **smoke tests**:
 
 ---
 
-## 📊 Reportes de Resultados
+## Reportes de Resultados
 
 Al finalizar la ejecución, Serenity genera un **reporte HTML interactivo** en la siguiente ruta:
 
