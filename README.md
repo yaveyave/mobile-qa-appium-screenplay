@@ -1,11 +1,11 @@
-# 📱 Proyecto QA Automatizado - Appium + Serenity + Screenplay
+# Proyecto QA Automatizado - Appium + Serenity + Screenplay
 
 Este proyecto es una **suite de pruebas automatizadas móviles** para la aplicación **API Demos (Android)**.  
 El objetivo es mostrar un ejemplo claro y profesional de cómo implementar pruebas de UI móviles usando **Appium** y el patrón **Screenplay**, soportado por **Serenity BDD** y **Cucumber**.
 
 ---
 
-## 🚀 Tecnologías y Patrón Utilizados
+## Tecnologías y Patrón Utilizados
 
 - **Appium** → Framework para la automatización de aplicaciones móviles (Android en este caso).  
 - **Serenity BDD** → Framework de automatización que facilita la escritura de pruebas legibles y genera reportes detallados en HTML.  
@@ -20,7 +20,7 @@ Este patrón favorece la **legibilidad**, **reutilización de código** y **mant
 
 ---
 
-## 📦 Requisitos Previos
+##Requisitos Previos
 
 Antes de ejecutar el proyecto, necesitas instalar:
 
@@ -37,7 +37,7 @@ Antes de ejecutar el proyecto, necesitas instalar:
 
 ---
 
-## ⚙️ Estructura del Proyecto
+## Estructura del Proyecto
 
 - **`/src/test/resources/features/`** → Archivos `.feature` escritos en Gherkin.  
 - **`/src/test/java/com/demo/mobile/stepdefinitions/`** → Step Definitions (glue code).  
@@ -48,7 +48,7 @@ Antes de ejecutar el proyecto, necesitas instalar:
 
 ---
 
-## ▶️ Ejecución de las Pruebas
+## Ejecución de las Pruebas
 
 Puedes ejecutar las pruebas de diferentes formas:
 
@@ -87,7 +87,7 @@ El reporte incluye:
 
 ---
 
-## ✅ Conclusión
+## Conclusión
 
 Este proyecto es un **ejemplo demostrativo** de cómo aplicar **Appium + Serenity + Cucumber** bajo el **patrón Screenplay** para la automatización de pruebas móviles.  
 Su estructura modular permite **extender fácilmente los escenarios**, reutilizar código y generar reportes claros que aportan valor tanto al equipo técnico como al negocio.
