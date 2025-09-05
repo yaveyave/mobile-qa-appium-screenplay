@@ -1,0 +1,68 @@
+# Java / Gradle
+/build/
+/.gradle/
+/out/
+/classes/
+/bin/
+/target/
+/*.class
+*.log
+
+# Archivos de lock
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+!gradlew
+!gradlew.bat
+
+# IDEs (IntelliJ / VS Code / Eclipse / NetBeans)
+.idea/
+/.vscode/
+/*.iml
+*.ipr
+*.iws
+/.project
+/.classpath
+/.settings/
+/nbproject/
+
+# Android / Appium
+*.apk
+*.ap_
+*.dex
+*.class
+*.jar
+*.keystore
+*.so
+
+# Archivos generados de build Android
+/app/build/
+/captures/
+/.externalNativeBuild/
+/.gradle/
+/local.properties
+
+#Serenity / Reportes de pruebas
+/target/
+/serenity/
+site/serenity
+/serenity.properties.backup
+*.json
+*.xml
+
+# Capturas de pantalla y videos (si no quieres almacenarlos en git)
+*.png
+*.jpg
+*.mp4
+
+# SO / temporales
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# Configuraciones locales
+.env
+*.local

@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    serenityVersion = '3.7.0'
+    serenityCucumberVersion = '3.7.0'
+}
+
+dependencies {
+    // Serenity + Screenplay
+    implementation "net.serenity-bdd:serenity-core:$serenityVersion"
+    implementation "net.serenity-bdd:serenity-junit:$serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay:$serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:$serenityVersion"
+    implementation "net.serenity-bdd:serenity-cucumber:$serenityCucumberVersion"
+    implementation "net.serenity-bdd:serenity-ensure:$serenityVersion"
+
+    // Appium (compatible con Serenity 3.x)
+    implementation 'io.appium:java-client:8.3.0'
+
+    // Selenium (alineado con Appium 8.x)
+    implementation 'org.seleniumhq.selenium:selenium-java:4.8.3'
+
+    // JUnit 4
+    testImplementation 'junit:junit:4.13.2'
+}
+
+tasks.withType(Test).configureEach {
+    useJUnit()
+
+    // Pasa opciones de Cucumber desde la consola
+    if (System.getProperty("cucumber.options") != null) {
+        systemProperties["cucumber.options"] = System.getProperty("cucumber.options")
+    }
+}
+
+// Usar Java 21
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
