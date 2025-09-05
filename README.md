@@ -20,7 +20,7 @@ Este patrón favorece la **legibilidad**, **reutilización de código** y **mant
 
 ---
 
-##Requisitos Previos
+## Requisitos Previos
 
 Antes de ejecutar el proyecto, necesitas instalar:
 
