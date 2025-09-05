@@ -78,12 +78,41 @@ Al finalizar la ejecución, Serenity genera un **reporte HTML interactivo** en l
 ```
 build/reports/tests/test/index.html
 ```
-
 El reporte incluye:
-- Resultados de escenarios y pasos.  
-- Evidencia visual (capturas de pantalla).  
-- Métricas de cobertura de pruebas.  
-- Gráficas de ejecución para análisis rápido.  
+- Resultados de escenarios y pasos.
+- Evidencia visual (capturas de pantalla).
+- Métricas de cobertura de pruebas.
+- Gráficas de ejecución para análisis rápido.
+
+---
+
+## Archivos de prueba (APK)
+
+Este proyecto requiere el archivo **ApiDemos-debug.apk** para ejecutar las pruebas automatizadas.
+
+🔒 **Por buenas prácticas, los binarios `.apk` no están versionados en GitHub** (se encuentran excluidos en `.gitignore`). Esto mantiene el repositorio liviano y centrado únicamente en el código fuente.
+
+### Instrucciones para añadir el APK:
+
+1. Descarga el APK de prueba desde el repositorio oficial de Appium:  
+   [ApiDemos-debug.apk](https://github.com/appium/appium/blob/master/packages/appium/sample-code/apps/ApiDemos-debug.apk)
+
+2. Colócalo en la ruta de tu proyecto:
+   ```
+   src/test/resources/apps/ApiDemos-debug.apk
+   ```
+
+3. Verifica el archivo `serenity.properties` y ajusta la propiedad `appium.app` si tu ruta local es diferente:
+   ```properties
+   appium.app=src/test/resources/apps/ApiDemos-debug.apk
+   ```
+   Ejemplo con ruta absoluta:
+   ```properties
+   appium.app=/home/usuario/Downloads/ApiDemos-debug.apk
+   ```
+
+⚠️ **Nota importante:**  
+Si no agregas manualmente el APK en la ruta indicada, las pruebas **no podrán ejecutarse**, ya que Appium necesita desplegar esta aplicación de ejemplo en el emulador o dispositivo.
 
 ---
 
@@ -91,3 +120,4 @@ El reporte incluye:
 
 Este proyecto es un **ejemplo demostrativo** de cómo aplicar **Appium + Serenity + Cucumber** bajo el **patrón Screenplay** para la automatización de pruebas móviles.  
 Su estructura modular permite **extender fácilmente los escenarios**, reutilizar código y generar reportes claros que aportan valor tanto al equipo técnico como al negocio.
+
